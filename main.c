@@ -29,6 +29,8 @@ this file output.csv)
 
 */
 #include <stdio.h>
+#include <stdlib.h>
+
 
 // roughness values
 // values in mm
@@ -36,6 +38,31 @@ const float CONCRETE_ROUGHNESS = 1.0;
 const float CARBON_ROUGHNESS   = 0.045 ; // steel
 const float GLASS_ROUGHNESS    = 0.0015;
 const float PVC_ROUGHNESS      = 0.0060; // plastic
+
+int read_input() {
+  int pipeValues;
+  FILE *fptr; // file pointer
+
+  if ((fptr = fopen("input.txt","r")) == NULL){
+       printf("Error! opening file");
+
+       // Program exits if the file pointer returns NULL.
+       exit(1);
+   }
+
+   fscanf(fptr,"%d", &pipeValues);
+
+   printf("Value of n=%d", pipeValues);
+   fclose(fptr);
+
+  return 0;
+}
+
+int write_csv_file(/* arguments */) {
+  /* code */
+  return 0;
+}
+
 
 int main(void) {
 
@@ -71,11 +98,8 @@ int main(void) {
 
     }
 
-  return 0;
-}
+    // read pipe values
+    read_input();
 
-
-int read_input(/* arguments */) {
-  /* code */
   return 0;
 }
