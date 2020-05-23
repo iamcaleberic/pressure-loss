@@ -1,0 +1,5 @@
+Pipe diameter(m) 0.76
+Pipe length(m) 560000.00
+Fluid velocity(m/s) 1.00
+Fluid density(kg/m3) 1000.00
+Fluid viscosity(Pa.s) 0.001
