@@ -5,4 +5,4 @@ Frictional pressure loss for fluid flow in straight pipes
 
 `gcc main.c`
 
-`bash ./a.out`
+`bash a.out`
